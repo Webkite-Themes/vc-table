@@ -1,0 +1,23 @@
+images:
+  - angle-light.png
+  - angle-dark.png
+  - plus-light.png
+  - plus-dark.png
+  - branding-light.svg
+  - branding-dark.svg
+  - clear-all-icon.png
+  - open-close.png
+  - sort-direction.png
+  
+stylesheets:
+  - light.css
+  - dark.css
+  
+templates:
+  - results.handlebars.js
+  
+partials:
+  - paginator.handlebars.js
+  - filters.handlebars.js
+  - sorts.handlebars.js
+  - result-details.handlebars.js

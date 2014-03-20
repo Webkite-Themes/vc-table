@@ -1,0 +1,155 @@
+{{log this}}
+<header class="webkite-results-header">
+  {{>sorts this.sort}}
+  {{>filters this.filters}}
+</header>
+
+{{#if items.length}}
+{{#with items}}
+<table>
+  <thead class="until-xs">
+    <tr>
+      <th class="image-thumbnail"></th>
+      <th class="webkite-name webkite-apply-sort">
+        {{#if (contains ../sort.sortableFacets "Business Name")}}
+        <a href="#" data-sort="Business Name" class="{{../../currentDirection}}">Name</a>
+        {{else}}
+        <span>Name</span>
+        {{/if}}
+      </th>
+      <th class="webkite-location until-xs"><span class="md-only">Location</span></th>
+      <th class="until-sm">
+      {{#if (contains (pluck ../filters.filterableFacets "name") "Status")}}
+      <span>Status</span>
+      {{else}}
+      {{/if}}
+      </th>
+      <th class="open-toggle"></th>
+    </tr>
+  </thead>
+  {{#each this}}
+  <tbody>
+    <tr class="webkite-result">      
+      <td class="image-thumbnail until-xs">
+        {{#facet name="Image"}}<div class="image-thumbnail" style="background-image:url({{displayValue}});"></div>{{/facet}}
+      </td>
+      <td class="webkite-name">
+        <ul>
+          <li>
+            {{#facet name="Business Name"}}<h2>{{displayValue}}</h2>{{/facet}} 
+          </li>
+        	<li class="xs-only">
+            <b>location</b>
+            <span class="facet-values location">
+              {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+              {{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+              {{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+            </span>
+          </li>
+        	<li class="xs-only">
+          {{#facet name="Status"}}
+          {{#if filterable}}
+          <b class="inline-filter-button">
+            <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
+            <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+              {{#each filterableValues}}
+              <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+              {{/each}}
+            </ul>
+          </b>
+          {{else}}
+          <b>{{downcase name}}</b>
+          {{/if}}
+          {{#if filterable}}
+          <span class="facet-values">
+            {{#each values}}
+            <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
+            {{/each}}
+          </span>
+          {{else}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/if}}
+          {{/facet}}
+          </li>
+        </ul>
+      </td>
+      <td class="webkite-location until-xs">
+        <ul>
+        	<li class="sm-only">
+            <b>location</b>
+            <span class="facet-values location">
+              {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+              {{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+              {{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+            </span>
+          </li>
+        	<li class="sm-only">
+          {{#facet name="Status"}}
+          {{#if filterable}}
+          <b class="inline-filter-button">
+            <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
+            <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+              {{#each filterableValues}}
+              <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+              {{/each}}
+            </ul>
+          </b>
+          {{else}}
+          <b>{{downcase name}}</b>
+          {{/if}}
+          {{#if filterable}}
+          <span class="facet-values">
+            {{#each values}}
+            <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
+            {{/each}}
+          </span>
+          {{else}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/if}}
+          {{/facet}}
+          </li>
+        </ul>
+      </td>
+      <td class="md-only">
+        <ul>
+        {{#facet name="Status"}}
+        {{#if filterable}}
+          <li>
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}<br>{{/unless}}
+          {{/each}}
+          </li>
+        {{else}}
+        <li>
+        {{#each values}}{{this}}{{#unless @last}}<br>{{/unless}}{{/each}}
+        </li>
+        {{/if}}
+        {{/facet}}
+        </ul>
+      </td>
+      <td class="open-toggle">
+        <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#if showDetails}}webkite-hide{{/if}} more-button" data-target=".{{this.id}}-toggler" data-animate="200ms"></a>
+      	<a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item webkite-toggle {{this.id}}-toggler {{#unless showDetails}}webkite-hide{{/unless}} less-button" data-target=".{{this.id}}-toggler" data-animate="200ms"></a>
+      </td>
+    </tr>
+    <tr id="{{this.id}}" class="webkite-item-details">{{>result-details}}</tr>
+  </tbody>
+  {{/each}}
+</table>
+{{/with}}
+{{else}}
+<section class="webkite-no-results">
+  <h2>Sorry, no results</h2>
+  <p>There are no results to display based on the selected filters. Try removing a filter to see more results.</p>
+  <footer class="webkite-result-footer"></footer>
+</section>
+{{/if}}
+
+<footer class="webkite-results-footer">
+  <div class="webkite-branding-area"><a href="http://webkite.com"></a></div>
+  <div class="webkite-pagination-area">{{>paginator pagination}}</div>
+</footer>
