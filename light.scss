@@ -200,7 +200,7 @@ $mainGutter: 1.25em;
   .sort-menu li.active a{
     position: relative;
     padding-right: $mainGutter*1.5;
-    &.asc:after, &.desc:after{
+    &.asc::after, &.desc::after{
       background: url("sort-direction.png") no-repeat;
       content: "";
       display: block;
@@ -210,8 +210,8 @@ $mainGutter: 1.25em;
       top: $mainGutter/2;
       right: $mainGutter/2;
       }
-    &.asc:after{background-position: 0 0;}
-    &.desc:after{background-position: 0 -5px;}
+    &.asc::after{background-position: 0 0;}
+    &.desc::after{background-position: 0 -5px;}
     }
   
   }
@@ -367,7 +367,7 @@ $mainGutter: 1.25em;
       cursor: pointer;
       padding-right: $mainGutter;
       position: relative;
-      &:after{
+      &::after{
         content: "\203A";
         color: $lightOpacity;
         opacity: .5;

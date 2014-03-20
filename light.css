@@ -172,7 +172,7 @@
   #webkite-results .sort-menu li.active a {
     position: relative;
     padding-right: 1.875em; }
-    #webkite-results .sort-menu li.active a.asc:after, #webkite-results .sort-menu li.active a.desc:after {
+    #webkite-results .sort-menu li.active a.asc::after, #webkite-results .sort-menu li.active a.desc::after {
       background: url("sort-direction.png") no-repeat;
       content: "";
       display: block;
@@ -181,9 +181,9 @@
       position: absolute;
       top: 0.625em;
       right: 0.625em; }
-    #webkite-results .sort-menu li.active a.asc:after {
+    #webkite-results .sort-menu li.active a.asc::after {
       background-position: 0 0; }
-    #webkite-results .sort-menu li.active a.desc:after {
+    #webkite-results .sort-menu li.active a.desc::after {
       background-position: 0 -5px; }
 
 /************************************************ FILTERS */
@@ -344,7 +344,7 @@
   cursor: pointer;
   padding-right: 1.25em;
   position: relative; }
-  #webkite-results .filter-menu > li > .webkite-link:after {
+  #webkite-results .filter-menu > li > .webkite-link::after {
     content: "\203A";
     color: rgba(0, 0, 0, 0.6);
     opacity: .5;
