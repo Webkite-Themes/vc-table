@@ -493,6 +493,8 @@
       color: rgba(0, 0, 0, 0.6); }
 #webkite-results td.webkite-location .city, #webkite-results td.webkite-location .state, #webkite-results td.webkite-location .country {
   display: inline; }
+#webkite-results td.webkite-location .city + .state:before {
+  content: ", "; }
 #webkite-results td.webkite-location .city + .country:before {
   content: ", "; }
 #webkite-results td.webkite-location .state + .country:before {
@@ -532,6 +534,8 @@
   background: rgba(0, 0, 0, 0.04); }
 #webkite-results tbody:nth-child(even) {
   background: rgba(0, 0, 0, 0.02); }
+#webkite-results tbody tr {
+  height: 4.375em; }
 #webkite-results div.image-thumbnail {
   -webkit-border-radius: 0.188em;
   -moz-border-radius: 0.188em;
@@ -565,8 +569,7 @@
 #webkite-results th.webkite-apply-sort a.desc:before {
   background-position: 0 -5px; }
 #webkite-results td ul li {
-  width: 100%;
-  margin-bottom: 0.625em; }
+  width: 100%; }
 #webkite-results td ul b {
   font-weight: 700; }
 #webkite-results td ul b, #webkite-results td ul .facet-values {
@@ -574,6 +577,8 @@
   width: 100%; }
 #webkite-results td ul .city, #webkite-results td ul .state, #webkite-results td ul .country {
   display: inline; }
+#webkite-results td ul .city + .state:before {
+  content: ", "; }
 #webkite-results td ul .city + .country:before {
   content: ", "; }
 #webkite-results td ul .state + .country:before {
@@ -731,7 +736,7 @@
   padding-bottom: 1.25em; }
 #webkite-results.xs .webkite-results-footer {
   height: 6.876em; }
-#webkite-results.xs .webkite-address, #webkite-results.xs .webkite-name {
+#webkite-results.xs .webkite-location, #webkite-results.xs .webkite-name {
   border: none; }
 #webkite-results.xs .webkite-name li {
   margin-bottom: 0.625em;
@@ -763,9 +768,9 @@
     width: 100%; }
   #webkite-results.sm .forty li .webkite-toggle, #webkite-results.sm .sixty li .webkite-toggle {
     width: auto; }
-#webkite-results.sm .webkite-address {
+#webkite-results.sm .webkite-location {
   border: none; }
-  #webkite-results.sm .webkite-address li {
+  #webkite-results.sm .webkite-location li {
     margin-bottom: 0.625em; }
 #webkite-results.sm .webkite-name {
   max-width: 8em; }

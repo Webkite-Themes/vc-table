@@ -11,8 +11,8 @@
     <tr>
       <th class="image-thumbnail"></th>
       <th class="webkite-name webkite-apply-sort">
-        {{#if (contains ../sort.sortableFacets "Business Name")}}
-        <a href="#" data-sort="Business Name" class="{{../../currentDirection}}">Name</a>
+        {{#if (contains ../sort.sortableFacets "Company Name")}}
+        <a href="#" data-sort="Company Name" class="{{../../currentDirection}}">Name</a>
         {{else}}
         <span>Name</span>
         {{/if}}
@@ -31,19 +31,19 @@
   <tbody>
     <tr class="webkite-result">      
       <td class="image-thumbnail until-xs">
-        {{#facet name="Image"}}<div class="image-thumbnail" style="background-image:url({{displayValue}});"></div>{{/facet}}
+        {{#facet name="Logo"}}<div class="image-thumbnail" style="background-image:url({{displayValue}});"></div>{{/facet}}
       </td>
       <td class="webkite-name">
         <ul>
           <li>
-            {{#facet name="Business Name"}}<h2>{{displayValue}}</h2>{{/facet}} 
+            {{#facet name="Company Name"}}<h2>{{displayValue}}</h2>{{/facet}} 
           </li>
         	<li class="xs-only">
             <b>location</b>
             <span class="facet-values location">
-              {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
-              {{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
-              {{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+              {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}<!--
+              -->{{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}<!--
+              -->{{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}
             </span>
           </li>
         	<li class="xs-only">
@@ -77,12 +77,12 @@
       </td>
       <td class="webkite-location until-xs">
         <ul>
-        	<li class="sm-only">
-            <b>location</b>
+        	<li>
+            <b class="sm-only">location</b>
             <span class="facet-values location">
-              {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
-              {{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
-              {{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+              {{#facet name="City"}}<p class="city">{{displayValue}}</p>{{/facet}}<!--
+              -->{{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}<!--
+              -->{{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}
             </span>
           </li>
         	<li class="sm-only">
