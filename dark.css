@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i);
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700");
 /* RESET */
 #webkite-results {
   /* HTML5 display-role reset for older browsers */ }
@@ -157,7 +157,7 @@
     -webkit-padding-start: 0;
     -moz-padding-start: 0;
     background: white;
-    font-size: .875em;
+    font-size: 0.875em;
     padding: 0.625em 0;
     position: absolute;
     z-index: 4;
@@ -225,7 +225,7 @@
     /* and & or */ }
     #webkite-results .current-filters span {
       color: rgba(127, 127, 127, 0.7);
-      font-size: .875em;
+      font-size: 0.875em;
       line-height: 1.2em;
       padding: 0 0.41667em;
       vertical-align: top; }
@@ -305,8 +305,8 @@
     width: 18px;
     margin-top: -1px;
     position: absolute;
-    right: .325em;
-    top: .375em; }
+    right: 0.325em;
+    top: 0.375em; }
     #webkite-results a.webkite-clear-filters:active {
       background-position: 0 -18px; }
 
@@ -324,7 +324,7 @@
   -webkit-padding-start: 0;
   -moz-padding-start: 0;
   background: white;
-  font-size: .875em;
+  font-size: 0.875em;
   padding: 0.625em 0;
   position: absolute;
   z-index: 3;
@@ -349,7 +349,7 @@
   #webkite-results .filter-menu > li > .webkite-link::after {
     content: "\203A";
     color: rgba(127, 127, 127, 0.7);
-    opacity: .5;
+    opacity: 0.5;
     position: absolute;
     right: 0.41667em; }
 #webkite-results .filter-menu-child {
@@ -382,7 +382,7 @@
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 5%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0) 100%);
   background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 5%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 5%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0.05) 75%, rgba(0, 0, 0, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
   height: auto;
   width: 1.5em;
   position: absolute;
@@ -451,10 +451,9 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.3125em;
     max-width: 1.5em;
-    font-size: .9em;
+    font-size: 0.9em;
     color: rgba(127, 127, 127, 0.7); }
-  #webkite-results .webkite-page-input::-webkit-outer-spin-button,
-  #webkite-results .webkite-page-input::-webkit-inner-spin-button {
+  #webkite-results .webkite-page-input::-webkit-outer-spin-button, #webkite-results .webkite-page-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
 
@@ -488,7 +487,7 @@
   border-right: 2px groove rgba(255, 255, 255, 0.05); }
 #webkite-results th {
   color: rgba(255, 255, 255, 0.7);
-  font-size: .875em; }
+  font-size: 0.875em; }
   #webkite-results th a {
     color: rgba(255, 255, 255, 0.7);
     padding: 0;
@@ -504,7 +503,7 @@
 #webkite-results td.webkite-location .state + .country:before {
   content: ", "; }
 #webkite-results td a {
-  font-size: .875em; }
+  font-size: 0.875em; }
   #webkite-results td a.webkite-email, #webkite-results td a.webkite-website {
     display: inline-block;
     max-width: 100%;
@@ -596,7 +595,7 @@
   background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 5%);
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 5%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 5%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#00000000',GradientType=0 );
   position: relative; }
   #webkite-results .webkite-item-details ul, #webkite-results .webkite-item-details div {
     -webkit-box-sizing: border-box;
@@ -699,7 +698,7 @@
     #webkite-results td .inline-filter-menu li a, #webkite-results .sixty .inline-filter-menu li a {
       color: #1b9cd2;
       display: block;
-      font-size: .875em;
+      font-size: 0.875em;
       font-weight: 400;
       max-width: 100%;
       padding: 0.15625em 1.25em 0.15625em 0.625em;
