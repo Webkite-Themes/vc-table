@@ -8,6 +8,8 @@ images:
   - clear-all-icon.png
   - open-close.png
   - sort-direction.png
+  - gradient-fallback-light.png
+  - gradient-fallback-dark.png
   
 stylesheets:
   - light.css
