@@ -2,6 +2,16 @@
 ---
 ##changelog
 
+###1.0.0
+
+* Head off list-style declarations
+* Update pagination to stay on one line
+* Remove ellipsis behavior from dark theme
+* Remove link to WebKite
+* Compress all partials into one
+* Gradient fallback for IE
+* Persistent borders around inline filter buttons
+
 ###0.1.0
 
 * Initial port of the Business Directory Table to act as the basis for VC Table
