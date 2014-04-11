@@ -16,6 +16,7 @@ $colorVariant:light;
   @include boxedUp;
   font-family:"Open Sans";
   font-size: 16px;
+  font: 400 16px/normal "Open Sans";
   max-width: 43.75em;
   margin: 0 auto;
   padding: $mainGutter;
