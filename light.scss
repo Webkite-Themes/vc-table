@@ -86,7 +86,6 @@ $colorVariant:light;
     .state + .country:before{content: ", ";}
     }
   td a{
-    font-size: .875em;
     &.webkite-email, &.webkite-website{@include ellipsisThis;}
     &.webkite-website{max-width: 10em;}
     &.webkite-email{display: block;}

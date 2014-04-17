@@ -502,18 +502,16 @@
   content: ", "; }
 #webkite-results td.webkite-location .state + .country:before {
   content: ", "; }
-#webkite-results td a {
-  font-size: 0.875em; }
-  #webkite-results td a.webkite-email, #webkite-results td a.webkite-website {
-    display: inline-block;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
-  #webkite-results td a.webkite-website {
-    max-width: 10em; }
-  #webkite-results td a.webkite-email {
-    display: block; }
+#webkite-results td a.webkite-email, #webkite-results td a.webkite-website {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+#webkite-results td a.webkite-website {
+  max-width: 10em; }
+#webkite-results td a.webkite-email {
+  display: block; }
 #webkite-results a.more-button, #webkite-results a.less-button {
   background: url("open-close.png");
   display: inline-block;
