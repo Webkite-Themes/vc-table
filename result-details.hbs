@@ -1,19 +1,16 @@
 <td colspan="5">
   <ul class="forty">
-    {{#facet name="Logo"}}<img src="{{displayValue}}"/>{{/facet}}
-  </ul>
-  <ul class="sixty">
     <li>
     	{{#facet name="Description"}}<p class="description">{{displayValue}}</p>{{/facet}}
     </li>
     <li>
-    <b>website</b>
     {{#facet name="Website"}}
     <span class="facet-values">
-      <a href="{{displayValue}}" class="webkite-website">{{displayValue}}</a>
+      <a href="{{displayValue}}" class="webkite-website">{{/facet}}{{#facet name="Company Name"}}{{displayValue}}{{/facet}}</a>
     </span>
-    {{/facet}}
     </li>
+  </ul>
+  <ul class="sixty">
     <li>
       {{#facet name="Stage"}}
       {{#if filterable}}

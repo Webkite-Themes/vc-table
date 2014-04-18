@@ -1,5 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700");
-
 $colorVariant:dark;
 
 //CALL UNIVERSALS
@@ -18,6 +16,7 @@ $colorVariant:dark;
   @include boxedUp;
   font-family:"Open Sans";
   font-size: 16px;
+  font: 400 16px/normal "Open Sans";
   max-width: 43.75em;
   margin: 0 auto;
   padding: $mainGutter;
@@ -57,7 +56,7 @@ $colorVariant:dark;
     }
   thead{
     @include boxedUp;
-    background: $lightestOpacity;
+    background: $lighterthanlightestOpacity;
     border: 1px solid $lighterOpacity;
     }
   th, td{
@@ -87,10 +86,7 @@ $colorVariant:dark;
     .state + .country:before{content: ", ";}
     }
   td a{
-    font-size: .875em;
-    &.webkite-email, &.webkite-website{@include ellipsisThis;}
-    &.webkite-website{max-width: 10em;}
-    &.webkite-email{display: block;}
+    &.webkite-email{@include ellipsisThis; display: block;}
     }
     a.more-button, a.less-button{
       background: url("open-close.png");
@@ -108,6 +104,10 @@ $colorVariant:dark;
       &:hover{background-position: -54px -18px;}
       &:active{background-position: -54px -36px;}
       }
+    .image-wrapper img{
+	    max-height: 50px;
+	    max-width: 100%;
+    	}
  
  }
   
@@ -184,7 +184,7 @@ $colorVariant:dark;
       display: inline-block;
       vertical-align: top;
       &.forty{max-width: 39%; width: 39%;}
-      &.sixty{max-width: 59%; width: 59%; padding-left: $mainGutter;}
+      &.sixty{max-width: 59%; width: 59%; padding-left: $mainGutter; font-size: .875em;}
       }
       img{
       @include roundedUp(.325em);
@@ -194,7 +194,7 @@ $colorVariant:dark;
       }
       li{line-height: 1.2em;padding-bottom: $mainGutter;}
       b, span.facet-values{display: inline-block; width: 49%; vertical-align: top;}
-      b{font-weight: 700;}
+      b{font-weight: 700; text-align: right; padding-right: $mainGutter; @include boxedUp;}
     }
   tr + tr > td{
     column-span: 5;
@@ -266,6 +266,11 @@ $colorVariant:dark;
         }
       }
     }
+  .webkite-item-details .inline-filter-menu{
+	  left: inherit;
+	  right: -$mainGutter/2;
+	  text-align: left;
+  	}
   
 }
 
@@ -306,7 +311,7 @@ $colorVariant:dark;
   .webkite-item-details{ul.forty, ul.sixty{max-width:100%;width: 100%; padding-left: 0;}}
   .forty li, .sixty li{
     width: 100%;
-    b, .facet-values{width: 100%;}
+    b, .facet-values{width: 100%; text-align: left;}
     .webkite-toggle{width: auto;}
     }
   .forty .inline-filter-menu li a, .sixty .inline-filter-menu li a{
@@ -325,6 +330,7 @@ $colorVariant:dark;
   .webkite-location, .webkite-name{border: none;}
   .webkite-name{li{margin-bottom: $mainGutter/2;width: 100%;}}
    td{vertical-align: top; &.open-toggle{vertical-align: middle;}}
+   .webkite-item-details .inline-filter-menu{right: inherit; left: $mainGutter/2;}
     
   }//end xs
   
@@ -343,11 +349,13 @@ $colorVariant:dark;
     margin-left: 0;
     padding-left: 0;
     }
-   .webkite-item-details ul.forty{max-width: 43%; width: 43%;}
+   /*
+.webkite-item-details ul.forty{max-width: 43%; width: 43%;}
    .webkite-item-details ul.sixty{max-width: 55%; width: 55%;}
+*/
   .forty li, .sixty li{
     width: 100%;
-    b, .facet-values{width: 100%;}
+    b, .facet-values{width: 100%; text-align: left;}
     .webkite-toggle{width: auto;}
     }
   .webkite-location{border: none; 
@@ -359,7 +367,8 @@ $colorVariant:dark;
     }
     td{vertical-align: top; &.open-toggle{vertical-align: middle;}}
     th.image-thumbnail, td.image-thumbnail{width: 45px;}
-    div.image-thumbnail{width: 1.563em; height: 1.563em;}
+    /* div.image-thumbnail{width: 1.563em; height: 1.563em;} */
+    .webkite-item-details .inline-filter-menu{right: inherit; left: $mainGutter/2;}
     
   }//end sm
   
