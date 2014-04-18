@@ -502,15 +502,12 @@
   content: ", "; }
 #webkite-results td.webkite-location .state + .country:before {
   content: ", "; }
-#webkite-results td a.webkite-email, #webkite-results td a.webkite-website {
+#webkite-results td a.webkite-email {
   display: inline-block;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap; }
-#webkite-results td a.webkite-website {
-  max-width: 10em; }
-#webkite-results td a.webkite-email {
+  white-space: nowrap;
   display: block; }
 #webkite-results a.more-button, #webkite-results a.less-button {
   background: url("open-close.png");
@@ -610,7 +607,8 @@
     #webkite-results .webkite-item-details ul.sixty, #webkite-results .webkite-item-details div.sixty {
       max-width: 59%;
       width: 59%;
-      padding-left: 1.25em; }
+      padding-left: 1.25em;
+      font-size: 0.875em; }
   #webkite-results .webkite-item-details img {
     -webkit-border-radius: 0.325em;
     -moz-border-radius: 0.325em;
