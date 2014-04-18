@@ -529,6 +529,9 @@
     background-position: -54px -18px; }
   #webkite-results a.less-button:active {
     background-position: -54px -36px; }
+#webkite-results .image-wrapper img {
+  max-height: 50px;
+  max-width: 100%; }
 
 /************************************ TABLE RESULTS */
 #webkite-results tbody:nth-child(odd) {

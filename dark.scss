@@ -106,6 +106,10 @@ $colorVariant:dark;
       &:hover{background-position: -54px -18px;}
       &:active{background-position: -54px -36px;}
       }
+    .image-wrapper img{
+	    max-height: 50px;
+	    max-width: 100%;
+    	}
  
  }
   
