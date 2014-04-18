@@ -1,8 +1,5 @@
 <td colspan="5">
   <ul class="forty">
-    {{#facet name="Logo"}}<img src="{{displayValue}}"/>{{/facet}}
-  </ul>
-  <ul class="sixty">
     <li>
     	{{#facet name="Description"}}<p class="description">{{displayValue}}</p>{{/facet}}
     </li>
@@ -12,6 +9,8 @@
       <a href="{{displayValue}}" class="webkite-website">{{/facet}}{{#facet name="Company Name"}}{{displayValue}}{{/facet}}</a>
     </span>
     </li>
+  </ul>
+  <ul class="sixty">
     <li>
       {{#facet name="Stage"}}
       {{#if filterable}}
