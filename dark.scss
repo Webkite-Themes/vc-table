@@ -56,7 +56,7 @@ $colorVariant:dark;
     }
   thead{
     @include boxedUp;
-    background: $lightestOpacity;
+    background: $lighterthanlightestOpacity;
     border: 1px solid $lighterOpacity;
     }
   th, td{
@@ -194,7 +194,7 @@ $colorVariant:dark;
       }
       li{line-height: 1.2em;padding-bottom: $mainGutter;}
       b, span.facet-values{display: inline-block; width: 49%; vertical-align: top;}
-      b{font-weight: 700;}
+      b{font-weight: 700; text-align: right; padding-right: $mainGutter; @include boxedUp;}
     }
   tr + tr > td{
     column-span: 5;
@@ -266,6 +266,11 @@ $colorVariant:dark;
         }
       }
     }
+  .webkite-item-details .inline-filter-menu{
+	  left: inherit;
+	  right: -$mainGutter/2;
+	  text-align: left;
+  	}
   
 }
 
@@ -306,7 +311,7 @@ $colorVariant:dark;
   .webkite-item-details{ul.forty, ul.sixty{max-width:100%;width: 100%; padding-left: 0;}}
   .forty li, .sixty li{
     width: 100%;
-    b, .facet-values{width: 100%;}
+    b, .facet-values{width: 100%; text-align: left;}
     .webkite-toggle{width: auto;}
     }
   .forty .inline-filter-menu li a, .sixty .inline-filter-menu li a{
@@ -325,6 +330,7 @@ $colorVariant:dark;
   .webkite-location, .webkite-name{border: none;}
   .webkite-name{li{margin-bottom: $mainGutter/2;width: 100%;}}
    td{vertical-align: top; &.open-toggle{vertical-align: middle;}}
+   .webkite-item-details .inline-filter-menu{right: inherit; left: $mainGutter/2;}
     
   }//end xs
   
@@ -343,11 +349,13 @@ $colorVariant:dark;
     margin-left: 0;
     padding-left: 0;
     }
-   .webkite-item-details ul.forty{max-width: 43%; width: 43%;}
+   /*
+.webkite-item-details ul.forty{max-width: 43%; width: 43%;}
    .webkite-item-details ul.sixty{max-width: 55%; width: 55%;}
+*/
   .forty li, .sixty li{
     width: 100%;
-    b, .facet-values{width: 100%;}
+    b, .facet-values{width: 100%; text-align: left;}
     .webkite-toggle{width: auto;}
     }
   .webkite-location{border: none; 
@@ -359,7 +367,8 @@ $colorVariant:dark;
     }
     td{vertical-align: top; &.open-toggle{vertical-align: middle;}}
     th.image-thumbnail, td.image-thumbnail{width: 45px;}
-    div.image-thumbnail{width: 1.563em; height: 1.563em;}
+    /* div.image-thumbnail{width: 1.563em; height: 1.563em;} */
+    .webkite-item-details .inline-filter-menu{right: inherit; left: $mainGutter/2;}
     
   }//end sm
   
